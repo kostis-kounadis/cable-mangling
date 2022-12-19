@@ -1,0 +1,11 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    /* For Typography | Could also be 62.5% so that 1rem=10px, 2.2rem=22px etc ?? */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
