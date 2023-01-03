@@ -61,9 +61,31 @@ header nav .logo-wrapper:hover {
     font-style: italic;
 }
 
-header nav a {
-    display: block;
+header nav .nav-wrapper {
+    display: none;
+}
+
+header nav .nav-toggle {
+    display: none;
+}
+
+
+
+header nav .nav-toggle-label {
+    height: 100%;
+    display: flex;
+    align-items: center;
     padding: 20px;
+    display: none;
+}
+
+header nav a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Three above to center vertically */
+    padding: 20px;
+    /* and this to give adequate space */
     transition: background-color 250ms ease-in;
 }
 
@@ -405,6 +427,27 @@ em {
 }
 
 @media screen and (max-width: 768px) {
+
+    header nav .nav-toggle-label {
+        display: flex;
+    }
+
+    header nav .nav-toggle:checked~.nav-wrapper {
+        display: none;
+    }
+
+    header nav .nav-wrapper {
+        display: flex;
+        position: absolute;
+        top: 3.75rem;
+        background: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        padding: 2rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
     .hero {
         display: block;
     }
@@ -442,6 +485,13 @@ em {
 
     /* ola copy paste k ksana */
 
+}
+
+@media screen and (min-width: 769px) {
+
+    header nav .nav-toggle:checked~.nav-wrapper {
+        display: flex;
+    }
 }
 
 :root {
@@ -501,6 +551,8 @@ em {
 
 .search:focus-within {
     width: 30%;
+    /* If class wasn't in container, a relative value (e.g. 30%) would work better */
+    min-width: 300px;
     border: 2px solid rgb(30, 30, 30);
     border-radius: 13px;
     background-color: white;
@@ -511,7 +563,8 @@ em {
     opacity: 1;
     z-index: initial;
     cursor: initial;
-    width: calc(100% - 30%);
+    width: calc(100% - 50px);
+    /* Don't know why... :( */
 }
 
 .search:focus-within .search__submit {
