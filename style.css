@@ -37,6 +37,7 @@ body {
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     color: rgb(20, 20, 20);
     line-height: 1.3;
+    position: relative;
 }
 
 header nav {
@@ -68,8 +69,6 @@ header nav .nav-wrapper {
 header nav .nav-toggle {
     display: none;
 }
-
-
 
 header nav .nav-toggle-label {
     height: 100%;
@@ -422,6 +421,35 @@ footer i {
     background-color: rgba(255, 255, 255, 0.01);
 }
 
+.back-to-top-wrapper {
+    position: absolute;
+    top: 100vh;
+    right: 2rem;
+    bottom: 0rem;
+    width: 2rem;
+    pointer-events: none;
+}
+
+.back-to-top-link {
+    margin: auto 0;
+    position: sticky;
+    pointer-events: all;
+    top: calc(100vh - 4rem);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100vh;
+    background-color: lightgrey;
+    padding: 0.5rem;
+}
+
 em {
     font-style: italic;
 }
@@ -504,7 +532,7 @@ em {
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    header nav .hero {
+    .hero {
         display: block;
     }
 
@@ -538,8 +566,6 @@ em {
         right: -3px;
         bottom: 20px;
     }
-
-    /* ola copy paste k ksana */
 
 }
 
@@ -625,5 +651,11 @@ em {
         outline: 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
         color: #f05429;
+    }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }
