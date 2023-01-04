@@ -1,6 +1,8 @@
 # cable-mangling
 
-This is a learning project.
+Live preview: https://kostis-kounadis.github.io/cable-mangling/
+
+This is a learning assessment, via TOP.
 
 The assignment is to create a single page using HTML and CSS.
 Requirements:
