@@ -115,6 +115,18 @@ header nav a:active {
     font-size: 1rem;
     color: whitesmoke;
     margin-bottom: 1rem;
+    border-bottom: 3px solid transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.hero button:hover {
+    background-color: white;
+    color: #f05429;
+}
+
+.hero button:active {
+    background-color: rgb(230, 230, 230);
+    border-bottom: 3px solid #f05429;
 }
 
 .hero h2 {
